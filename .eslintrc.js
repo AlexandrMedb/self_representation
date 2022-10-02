@@ -18,6 +18,7 @@ module.exports = {
   'plugins': [
     'react',
     '@typescript-eslint',
+    'simple-import-sort',
   ],
   'rules': {
     'linebreak-style': 0,
@@ -36,5 +37,27 @@ module.exports = {
     'valid-jsdoc': 1,
     'camelcase': 'off',
     'no-console': 1,
+    'simple-import-sort/imports': [
+      1,
+      {
+        groups: [
+          // `react` first, `next` second, then packages starting with a character
+          ['^react$', '^next', '^[a-z]'],
+          // Packages starting with `@`
+          ['^@'],
+          // Packages starting with `~`
+          ['^~'],
+          // Imports starting with `../`
+          ['^\\.\\.(?!/?$)', '^\\.\\./?$'],
+          // Imports starting with `./`
+          ['^\\./(?=.*/)(?!/?$)', '^\\.(?!/?$)', '^\\./?$'],
+          // Style imports
+          ['^.+\\.s?css$'],
+          // Side effect imports
+          ['^\\u0000'],
+        ],
+      },
+    ],
+    'simple-import-sort/exports': 'error',
   },
 };
