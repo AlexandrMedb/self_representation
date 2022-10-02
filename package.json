@@ -21,6 +21,8 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "cssModuleDeclorate": "npx typed-scss-modules src -w",
+    "dev": "npm-run-all -p -r start cssModuleDeclorate",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -82,6 +84,7 @@
     "stylelint": "^14.13.0",
     "stylelint-config-prettier-scss": "^0.0.1",
     "stylelint-config-standard-scss": "^5.0.0",
+    "typed-scss-modules": "^7.0.1",
     "webpack": "^5.74.0"
   }
 }
