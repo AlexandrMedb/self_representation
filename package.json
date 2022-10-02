@@ -23,7 +23,8 @@
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
-    "eslintFix": "npx eslint src/**/*.{tsx,ts,js,jsx} --fix"
+    "eslintFix": "npx eslint **/*.{tsx,ts,js,jsx} --fix",
+    "stylelintFix": "npx stylelint **/*.{scss,sass} --fix"
   },
   "eslintConfig": {
     "extends": [
@@ -51,6 +52,9 @@
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-react": "^7.31.8",
     "eslint-plugin-simple-import-sort": "^8.0.0",
-    "prettier": "2.7.1"
+    "prettier": "2.7.1",
+    "stylelint": "^14.13.0",
+    "stylelint-config-prettier-scss": "^0.0.1",
+    "stylelint-config-standard-scss": "^5.0.0"
   }
 }

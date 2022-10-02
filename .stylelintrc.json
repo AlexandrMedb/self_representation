@@ -1,0 +1,20 @@
+{
+  "extends": [
+    "stylelint-config-standard-scss",
+    "stylelint-config-prettier-scss"
+  ],
+  "rules": {
+    "selector-class-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "scss/dollar-variable-pattern": "^[a-z][a-zA-Z0-9]+$",
+    "alpha-value-notation": "number",
+    "scss/double-slash-comment-whitespace-inside": null,
+    "no-descending-specificity": null,
+    "property-no-unknown": [true, {
+      "ignoreProperties": ["/^color/"]
+
+    }],
+    "selector-pseudo-class-no-unknown": [true,  {
+      "ignorePseudoClasses": ["export"]
+    }]
+  }
+}
