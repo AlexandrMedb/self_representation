@@ -2,9 +2,7 @@
 
 $border: 1px solid colors.$mainTestColor;
 
-.wrapper {
-  margin-top: 25px;
-}
+
 
 
 .title {
@@ -13,6 +11,7 @@ $border: 1px solid colors.$mainTestColor;
   padding: 0 5px;
   border-top: $border;
   border-bottom: $border;
+  font-size: 1.1em;
 
   .icon {
     margin-right: 10px;

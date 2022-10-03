@@ -1,6 +1,9 @@
 export const mySkills = [
-  "HTML/JAVA/C+",
+  "JavaScript",
+  "TypeScript",
+  "React/Redux",
+  "HTML",
+  "SASS",
+  "CSS",
   "Communication Skills",
-  "WordPress",
-  "Dream Weaver",
 ];

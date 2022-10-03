@@ -15,7 +15,7 @@
 }
 
 .dataTitle {
-  font-size: 11px;
+  font-size: .9em;
   line-height: 14px;
 
   &::before{
@@ -33,14 +33,15 @@
 }
 
 .dataDescription{
-  font-size: 8px;
+  font-size: .7em;
   line-height: 140%;
   opacity: 0.7;
+  margin-bottom: 8px;
 }
 
 
 .dataSubListEl{
-  font-size: 9px;
+  font-size: .7em;
   line-height: 140%;
   margin-left: 10px;
 }

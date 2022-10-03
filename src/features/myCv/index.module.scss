@@ -4,6 +4,7 @@ $wrapperPadding:20px;
   background: linear-gradient(#DDDFDE 0%, #DDDFDE 40%, #FEEDE6 40%);
   min-height: 100vh;
   padding: $wrapperPadding 0;
+  box-sizing: border-box;
 }
 
 .container{
@@ -21,8 +22,14 @@ $wrapperPadding:20px;
 
 .leftSide{
   max-width: 195px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }
 
 .rightSide{
   max-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
 }

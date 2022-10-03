@@ -2,42 +2,31 @@ import { listItem } from "../components/dataList";
 
 export const education: listItem[] = [
   {
-    title: "Master of Computer Science",
+    title: "Бакалавр Радиотехники",
     sublist: [
-      "Graduated Summa Cum Laude.",
-      "Member of Student Association of Project Management.",
-      "Managed a student project to develop a weekly IT News podcast.",
-    ],
-  },
-  {
-    title: "Master of Computer Science",
-    sublist: [
-      "Graduated Summa Cum Laude.",
-      "Member of Student Association of Project Management.",
-      "Managed a student project to develop a weekly IT News podcast.",
+      "Диплом по распознанию объектов на ЖД путях.",
+      "С 3-го урса совмещал учебу с работой по специальности.",
     ],
   },
 ];
 
 export const experience: listItem[] = [
   {
-    title: "Web Developer",
-    description: "Claredon Smith, Los Angeles, CA, 2015–present",
+    title: "Frontend Developer",
+    description: "ООО Virtuozzy Systems, Санкт-Петербург, 2021–present",
     sublist: [
-      "Manage accounts worth $4.7 million in annual sales",
-      "Selected to train 3 new account managers on the basis of my stellar track record",
-      "Increased business volume by 150% by implementing new customer service initiative",
-      "Recovered 15 dormant accounts worth a total of $500,000",
+      "Разработка human resource системы",
+      "Разработка модулей для CRM",
+      "Оптимизация проектов",
     ],
   },
   {
-    title: "Web Developer",
-    description: "Claredon Smith, Los Angeles, CA, 2015–present",
+    title: "Test Engineer",
+    description: "OTIS, Санкт-Петербург, 2019–2022",
     sublist: [
-      "Manage accounts worth $4.7 million in annual sales",
-      "Selected to train 3 new account managers on the basis of my stellar track record",
-      "Increased business volume by 150% by implementing new customer service initiative",
-      "Recovered 15 dormant accounts worth a total of $500,000",
+      "Развите системы тестирования",
+      "Тестирование новых разработок",
+      "Работа с контрагентами",
     ],
   },
 ];

@@ -5,16 +5,23 @@
   align-items: center;
   justify-content: space-between;
   border-bottom: 1px solid colors.$mainTestColor;
+
+}
+
+.iconContainer{
+  box-sizing: border-box;
 }
 
 .icon {
   padding: 0 15px 0 10px;
   margin: 5px 0;
   border-right: 1px solid colors.$mainTestColor;
+  height: .8em;
+  width: .8em;
 }
 
 .contact {
   font-weight: 400;
-  font-size: 9px;
+  font-size: 0.7em;
   line-height: 11px;
 }

@@ -13,10 +13,8 @@ export const Presentation = () => {
         <img src={myPhoto} alt="frontenders`s photo" />
       </div>
       <div className={styles.aboutMeContainer}>
-        Web Developer with 8 years of experience in designing and developing
-        user interfaces, testing, debugging, and training staff within eCommerce
-        technologies. Proven ability in optimizing web functionality that
-        improve data retrieval and workflow efficiencies.
+        Frontend Developer с двух летним опытом разработки пользовательских
+        интерфейсов на стеке TS, React/Redux, SASS.
       </div>
     </section>
   );
