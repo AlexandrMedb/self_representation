@@ -1,0 +1,46 @@
+@use 'src/styles/colors.module' as colors;
+
+.wrapper {
+  border-left: 1px solid colors.$mainTestColor;
+  margin: 10px 0 0 2.5px;
+  padding-left: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+
+}
+
+.container{
+  position: relative;
+}
+
+.dataTitle {
+  font-size: 11px;
+  line-height: 14px;
+
+  &::before{
+    display: block;
+    content: '';
+    height: 5px;
+    width: 5px;
+    border-radius: 50%;
+    background: colors.$mainTestColor;
+    position: absolute;
+    top:0;
+    left: -13px;
+  }
+
+}
+
+.dataDescription{
+  font-size: 8px;
+  line-height: 140%;
+  opacity: 0.7;
+}
+
+
+.dataSubListEl{
+  font-size: 9px;
+  line-height: 140%;
+  margin-left: 10px;
+}

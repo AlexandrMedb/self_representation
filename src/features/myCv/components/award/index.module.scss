@@ -1,0 +1,18 @@
+@use 'src/styles/colors.module' as colors;
+
+.wrapper {
+  margin-top: 10px;
+  color: colors.$mainTestColor;
+}
+
+.award {
+  font-size: 10px;
+  line-height: 12px;
+}
+
+.description {
+  margin-top: 5px;
+  font-size: 9px;
+  line-height: 11px;
+  opacity: 0.7;
+}

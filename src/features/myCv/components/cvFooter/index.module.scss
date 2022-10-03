@@ -1,0 +1,19 @@
+.wrapper {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 22px;
+  margin-top: 13px;
+}
+
+.container {
+  max-width: 100px;
+  text-align: center;
+}
+
+.link {
+  font-weight: 400;
+  font-size: 8px;
+  line-height: 9px;
+}
