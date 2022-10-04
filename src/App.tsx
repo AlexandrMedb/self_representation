@@ -1,11 +1,11 @@
 import React from "react";
 
-import { MyCv } from "./features/myCv";
+import { Navigation } from "./hoc/navigation";
 
 import "./App.css";
 
 function App() {
-  return <MyCv />;
+  return <Navigation />;
 }
 
 export default App;
