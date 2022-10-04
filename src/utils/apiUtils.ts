@@ -9,7 +9,7 @@ export const reqInit = (body: any = {}, method: reqMethod = "POST") => ({
   body: JSON.stringify(body),
 });
 
-type resSuccses<T> = {
+type resSuccess<T> = {
   body: T;
   err?: never;
   status?: never;
@@ -21,9 +21,9 @@ type resFault = {
   status: number;
 };
 
-type a<T> = resSuccses<T> | resFault;
-
-export const resHandler = async <T>(res: Response): Promise<a<T>> => {
+export const resHandler = async <T>(
+  res: Response
+): Promise<resSuccess<T> | resFault> => {
   if (res.ok || res.status >= 300) {
     const body = (await res.json()) as T;
     return { body };

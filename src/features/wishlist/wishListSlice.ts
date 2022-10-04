@@ -49,6 +49,37 @@ export const wishListPost = createAsyncThunk(
   }
 );
 
+export const wishListPatch = createAsyncThunk(
+  "wishList/patchWish",
+  async (
+    { id, wish }: { id: string | number; wish: postWish },
+    { rejectWithValue }
+  ) => {
+    const response = await wishListApi.putWish<wish>(id, wish);
+    // The value we return becomes the `fulfilled` action payload
+
+    if (response.status) {
+      return rejectWithValue(response.err || "unknownError");
+    }
+
+    return id;
+  }
+);
+
+export const wishListDelete = createAsyncThunk(
+  "wishList/deleteWish",
+  async (id: string | number, { rejectWithValue }) => {
+    const response = await wishListApi.deleteWish<wish>(id);
+    // The value we return becomes the `fulfilled` action payload
+
+    if (response.status) {
+      return rejectWithValue(response.err || "unknownError");
+    }
+
+    return id;
+  }
+);
+
 export const counterSlice = createSlice({
   name: "counter",
   initialState,
@@ -66,6 +97,12 @@ export const counterSlice = createSlice({
         if (action.payload) {
           state.data.push(action.payload);
         }
+
+        state.status = "idle";
+        state.loading = false;
+      })
+      .addCase(wishListDelete.fulfilled, (state, action) => {
+        state.data = state.data.filter((el) => el.id !== action.payload);
 
         state.status = "idle";
         state.loading = false;

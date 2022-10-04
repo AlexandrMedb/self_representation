@@ -2,7 +2,7 @@
   "name": "self_representation",
   "version": "0.1.0",
   "private": true,
-  "proxy": "http://localhost:3000",
+  "proxy": "http://localhost:3004",
   "dependencies": {
     "@reduxjs/toolkit": "^1.8.5",
     "@testing-library/jest-dom": "^5.16.5",
@@ -31,7 +31,9 @@
     "eslintFix": "npx eslint **/*.{tsx,ts,js,jsx} --fix",
     "stylelintFix": "npx stylelint **/*.{scss,sass} --fix",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "JSON-server": "npx json-server --watch db.json --port 3004"
+
   },
   "eslintConfig": {
     "extends": [
