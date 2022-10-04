@@ -62,7 +62,7 @@ export const wishListPatch = createAsyncThunk(
       return rejectWithValue(response.err || "unknownError");
     }
 
-    return id;
+    return response.body;
   }
 );
 
@@ -88,11 +88,6 @@ export const counterSlice = createSlice({
 
   extraReducers: (builder) => {
     builder
-      .addCase(wishListFetch.fulfilled, (state, action) => {
-        state.data = action.payload || [];
-        state.status = "idle";
-        state.loading = false;
-      })
       .addCase(wishListPost.fulfilled, (state, action) => {
         if (action.payload) {
           state.data.push(action.payload);
@@ -101,6 +96,23 @@ export const counterSlice = createSlice({
         state.status = "idle";
         state.loading = false;
       })
+      .addCase(wishListFetch.fulfilled, (state, action) => {
+        state.data = action.payload || [];
+        state.status = "idle";
+        state.loading = false;
+      })
+      .addCase(wishListPatch.fulfilled, (state, action) => {
+        if (action.payload) {
+          const ind = state.data.findIndex(
+            (el) => el.id === action.payload?.id
+          );
+          state.data[ind] = action.payload;
+        }
+
+        state.status = "idle";
+        state.loading = false;
+      })
+
       .addCase(wishListDelete.fulfilled, (state, action) => {
         state.data = state.data.filter((el) => el.id !== action.payload);
 

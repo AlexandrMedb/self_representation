@@ -11,7 +11,7 @@ export class wishListApi {
     return fetchWrapper<T>("/posts", body);
   }
 
-  static async putWish<T>(id: string | number, wish: postWish) {
+  static async putWish<T = wish>(id: string | number, wish: postWish) {
     return fetchWrapper<T>(`/posts/${id}`, wish, "PUT");
   }
 
