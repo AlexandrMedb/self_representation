@@ -26,11 +26,18 @@
       "id": 8
     }
   ],
-  "comments": [
+  "tasks": [
     {
       "id": 1,
-      "body": "some comment",
-      "postId": 1
+      "task": "some comment"
+    },
+    {
+      "task": "newProduct",
+      "id": 2
+    },
+    {
+      "task": "33",
+      "id": 4
     }
   ],
   "profile": {

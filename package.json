@@ -32,7 +32,7 @@
     "stylelintFix": "npx stylelint **/*.{scss,sass} --fix",
     "storybook": "start-storybook -p 6006 -s public",
     "build-storybook": "build-storybook -s public",
-    "JSON-server": "npx json-server --watch db.json --port 3004"
+    "JSON-server": "npx json-server --watch fakeDb/db.json --port 3004"
 
   },
   "eslintConfig": {
